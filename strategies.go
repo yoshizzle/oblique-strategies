@@ -1,4 +1,4 @@
-package strategies
+package main
 
 import (
     "fmt"
@@ -6,16 +6,9 @@ import (
     "time"
 )
 
-function Strategy(strategy string) string {
-    strategy := fmt.Sprintf(randomFormat(), strategy)
-    return strategy
-}
-
-func init() {
+func main() {
     rand.Seed(time.Now().UnixNano())
-}
 
-func randomFormat() string {
     strategies := []string {
         "strategy 1",
         "stragegy 2",
@@ -23,5 +16,5 @@ func randomFormat() string {
         "strategy 4",
     }
 
-    return strategies[rand.Intn(len(strategies))]
+    fmt.Println(strategies[rand.Intn(len(strategies))])
 }
